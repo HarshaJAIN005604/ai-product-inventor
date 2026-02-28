@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Product Inventor</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="header">
+        <div>
+          <p class="eyebrow">AI Product Opportunity Dashboard</p>
+          <h1>AI Product Inventor</h1>
+        </div>
+        <p class="subtitle">
+          Structured innovation briefs for D2C founders and investor-ready product strategy.
+        </p>
+      </header>
+
+      <nav class="tabs" role="tablist" aria-label="Opportunity tabs">
+        <button class="tab-btn active" data-tab="vitamin-c" role="tab" aria-selected="true">Vitamin C</button>
+        <button class="tab-btn" data-tab="hair-serum" role="tab" aria-selected="false">Hair Serum</button>
+        <button class="tab-btn" data-tab="upload" role="tab" aria-selected="false">Upload &amp; Analyze</button>
+      </nav>
+
+      <main>
+        <section id="vitamin-c" class="tab-content active" role="tabpanel"></section>
+        <section id="hair-serum" class="tab-content" role="tabpanel"></section>
+        <section id="upload" class="tab-content" role="tabpanel">
+          <div class="card upload-card">
+            <h2>Upload &amp; Analyze Reviews</h2>
+            <p>
+              Upload a CSV with a <code>review_text</code> column to detect complaint patterns,
+              score opportunities, and generate high-potential product concepts.
+            </p>
+            <div class="upload-controls">
+              <input type="file" id="csv-input" accept=".csv" />
+              <button id="analyze-btn">Analyze Dataset</button>
+            </div>
+            <p class="hint">Example headers: <code>review_text</code>, <code>rating</code>, <code>created_at</code></p>
+          </div>
+          <div id="upload-results"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
